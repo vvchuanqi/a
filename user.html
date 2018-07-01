@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>个人中心</title>
+  <link rel="stylesheet" href="css/weui.min.css">
+  <link rel="stylesheet" href="css/global.css">
+  <style>
+    .account-money{background-color: #FFF;}
+    .block-item{padding:15px;border-radius: 12px;text-align:center;}
+    .block-item strong{display: block;font-size:14px;font-weight: lighter;opacity:.5;}
+    .block-item .number{font-size:24px;}
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="page-header">
+      <a href="index.html" class="header-btn-left header-btn-left__close">个人中心</a>
+    </div>
+    <div class="page-content">
+      <!-- start 用户头像和用户名 -->
+      <div class="weui-cells" style="margin-top:0;">
+            <div class="weui-cell weui-cell_access">
+                <div class="weui-cell__hd"><img src="images/avatar.jpg" alt="" style="width:80px;border-radius: 100%;margin-right:16px;display:block"></div>
+                <div class="weui-cell__bd">
+                    <p>张三</p>
+                </div>
+                <div class="weui-cell__ft"></div>
+            </div>
+        </div>
+      <!-- end 用户头像和用户名 -->
+      <!-- start 账户余额和用户积分 -->
+      <div class="weui-flex account-money">
+            <div class="weui-flex__item"><div class="block-item"><span class="price number text-success">375.00</span><strong>账户余额</strong></div></div>
+            <div class="weui-flex__item"><div class="block-item"><span class="number text-warning">1000</span><strong>我的积分</strong></div></div>
+        </div>
+      <!-- end 账户余额和用户积分 -->
+      <!-- start 用户个人菜单列表 -->
+      <div class="weui-cells">
+            <a class="weui-cell weui-cell_access" href="javascript:;">
+                <div class="weui-cell__hd"><img src="images/icon_card@2x.png" alt="" style="width:26px;margin-right:15px;display:block"></div>
+                <div class="weui-cell__bd">
+                    <p>余额充值</p>
+                </div>
+                <div class="weui-cell__ft"></div>
+            </a>
+            <a class="weui-cell weui-cell_access" href="javascript:;">
+                <div class="weui-cell__hd"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII=" alt="" style="width:26px;margin-right:15px;display:block"></div>
+                <div class="weui-cell__bd">
+                    <p>充电历史</p>
+                </div>
+                <div class="weui-cell__ft"></div>
+            </a>
+            <a class="weui-cell weui-cell_access" href="javascript:;">
+                <div class="weui-cell__hd"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII=" alt="" style="width:26px;margin-right:15px;display:block"></div>
+                <div class="weui-cell__bd">
+                    <p>充电金额汇总</p>
+                </div>
+                <div class="weui-cell__ft"></div>
+            </a>
+            <a class="weui-cell weui-cell_access" href="javascript:;">
+                <div class="weui-cell__hd"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII=" alt="" style="width:26px;margin-right:15px;display:block"></div>
+                <div class="weui-cell__bd">
+                    <p>充电金额明细</p>
+                </div>
+                <div class="weui-cell__ft"></div>
+            </a>
+        </div>
+
+        <div class="weui-cells">
+              <a class="weui-cell weui-cell_access" href="javascript:;">
+                  <div class="weui-cell__hd"><img src="images/star@2x.png" alt="" style="width:26px;margin-right:15px;display:block"></div>
+                  <div class="weui-cell__bd">
+                      <p>我的收藏</p>
+                  </div>
+                  <div class="weui-cell__ft"></div>
+              </a>
+          </div>
+
+
+          <div class="weui-cells">
+                <a class="weui-cell weui-cell_access" href="javascript:;">
+                    <div class="weui-cell__hd"><img src="images/star@2x.png" alt="" style="width:26px;margin-right:15px;display:block"></div>
+                    <div class="weui-cell__bd">
+                        <p>充电服务评价</p>
+                    </div>
+                    <div class="weui-cell__ft"></div>
+                </a>
+            </div>
+      <!-- start 用户个人菜单列表 -->
+    </div>
+  </div>
+  <script type="text/javascript" src="js/zepto.min.js"></script>
+  <script type="text/javascript">
+
+  </script>
+</body>
+</html>
