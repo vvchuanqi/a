@@ -5,8 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>公众号首页</title>
+  <link rel="stylesheet" href="css/weui.min.css">
+  <link rel="stylesheet" href="css/global.css">
+  <style>
+    .page-footer{height:52px;display: flex;flex-flow: row;border-top:1px solid #e5e5e5;align-items: center;}
+    .page-footer__item{flex:1;text-align:center;align-self: center;line-height: 52px;position: relative;color:#333;}
+    .page-footer__item:before{position: absolute;left:0;top:0;bottom:0;content:"";border-left:1px solid #e5e5e5;}
+    .page-footer__item:after{position: absolute;left:2em;top:5px;right:2em;content:"";border-top:1px solid #e5e5e5;border-bottom:1px solid #e5e5e5;height:2px;}
+    .page-footer__item:active{background-color: #f8f8f9;}
+    
+    .btn-port-toggle{padding:0 15px;}
+    .btn-port-toggle img{display: block;}
+  </style>
 </head>
 <body>
+  <div class="page">
+    <div class="page-header">
+      <a href="#" class="header-btn-left header-btn-left__access">XXX充电桩</a>
+    </div>
+    <div class="page-content"></div>
+    <div class="page-footer">
+      <div class="btn-port-toggle"><img src="images/icon_keyboard@2x.png" alt="键盘图标" width="41"></div>
+      <a class="page-footer__item" href="#">我要充电</a>
+      <a class="page-footer__item" href="#">充电监控</a>
+      <a class="page-footer__item" href="user.html">个人中心</a>
+    </div>
+  </div>
+  <script type="text/javascript" src="js/zepto.min.js"></script>
+  <script type="text/javascript">
 
+  </script>
 </body>
 </html>
