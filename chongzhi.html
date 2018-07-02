@@ -10,9 +10,6 @@
   <style>
     .select-money{background-color: #FFF;}
     .select-money .weui-flex__item{padding:10px 15px;}
-    .block-item{padding:15px;border-radius: 12px;text-align:center;}
-    .block-item strong{display: block;font-size:14px;font-weight: lighter;opacity:.5;}
-    .block-item .number{font-size:24px;}
   </style>
 </head>
 <body>
@@ -61,7 +58,13 @@
   </div>
   <script type="text/javascript" src="js/zepto.min.js"></script>
   <script type="text/javascript">
-
+      $(function(){
+        //点击按钮加载选中的样式
+        $(".select-money .weui-btn").click(function(){
+          $(".select-money .weui-btn").removeClass("weui-btn_primary").addClass("weui-btn_plain-primary");
+          $(this).removeClass("weui-btn_plain-primary").addClass("weui-btn_primary");
+        });
+      });
   </script>
 </body>
 </html>
