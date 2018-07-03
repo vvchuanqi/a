@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>选择城市</title>
+  <link rel="stylesheet" href="css/weui.min.css">
+  <link rel="stylesheet" href="css/global.css">
+  <style>
+    .page-content{position: relative;}
+    .hot-citys{background-color: #FFF;padding-left:6px;padding-right:6px;}
+    .hot-citys .weui-btn{margin:10px;}
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div>
+      <!-- start 搜索条 -->
+      <div class="weui-search-bar" id="searchBar">
+            <form class="weui-search-bar__form">
+                <div class="weui-search-bar__box">
+                    <i class="weui-icon-search"></i>
+                    <input type="search" class="weui-search-bar__input" id="searchInput" placeholder="搜索" required="">
+                    <a href="javascript:" class="weui-icon-clear" id="searchClear"></a>
+                </div>
+                <label class="weui-search-bar__label" id="searchText">
+                    <i class="weui-icon-search"></i>
+                    <span>搜索</span>
+                </label>
+            </form>
+            <a href="javascript:" class="weui-search-bar__cancel-btn" id="searchCancel">取消</a>
+        </div>
+      <!-- end 搜索条 -->
+      <div class="weui-cells" style="margin-top:0;">
+        <div class="weui-cell weui-cell_vcode">
+                <div class="weui-cell__hd">
+                    <label class="weui-label">当前定位：</label>
+                </div>
+                <div class="weui-cell__bd">
+                    珠海市
+                </div>
+                <div class="weui-cell__ft">
+                    <button class="weui-vcode-btn">全国桩群</button>
+                </div>
+            </div>
+      </div>
+    </div>
+    <div class="page-content">
+      <!-- start 热门城市 -->
+      <div class="weui-cells__title">热门城市</div>
+      <div class="weui-flex hot-citys">
+            <div class="weui-flex__item"><a class="weui-btn weui-btn_default" href="javascript:;">北京</a></div>
+            <div class="weui-flex__item"><a class="weui-btn weui-btn_default" href="javascript:;">天津</a></div>
+            <div class="weui-flex__item"><a class="weui-btn weui-btn_default" href="javascript:;">太原</a></div>
+      </div>
+      <div class="weui-flex hot-citys">
+            <div class="weui-flex__item"><a class="weui-btn weui-btn_default" href="javascript:;">上海</a></div>
+            <div class="weui-flex__item"><a class="weui-btn weui-btn_default" href="javascript:;">常州</a></div>
+            <div class="weui-flex__item"><a class="weui-btn weui-btn_default" href="javascript:;">珠海</a></div>
+      </div>
+      <!-- end 热门城市 -->
+      <!-- start A -->
+      <div class="weui-cells__title">A</div>
+      <div class="weui-cells">
+        <div class="weui-cell weui-cell_access ">
+            <div class="weui-cell__bd">
+                <p>阿坝藏族羌族自治州</p>
+            </div>
+        </div>
+        <div class="weui-cell weui-cell_access ">
+            <div class="weui-cell__bd">
+                <p>阿克苏地区</p>
+            </div>
+        </div>
+        <div class="weui-cell weui-cell_access ">
+            <div class="weui-cell__bd">
+                <p>阿拉善盟</p>
+            </div>
+        </div>
+      </div>
+      <!-- end A -->
+      <!-- start B -->
+      <div class="weui-cells__title">B</div>
+      <div class="weui-cells">
+        <div class="weui-cell weui-cell_access ">
+            <div class="weui-cell__bd">
+                <p>白城</p>
+            </div>
+        </div>
+        <div class="weui-cell weui-cell_access ">
+            <div class="weui-cell__bd">
+                <p>百色</p>
+            </div>
+        </div>
+        <div class="weui-cell weui-cell_access ">
+            <div class="weui-cell__bd">
+                <p>白山</p>
+            </div>
+        </div>
+      </div>
+      <!-- end B -->
+      <!-- start C -->
+      <div class="weui-cells__title">C</div>
+      <div class="weui-cells">
+        <div class="weui-cell weui-cell_access ">
+            <div class="weui-cell__bd">
+                <p>沧州</p>
+            </div>
+        </div>
+        <div class="weui-cell weui-cell_access ">
+            <div class="weui-cell__bd">
+                <p>长春</p>
+            </div>
+        </div>
+        <div class="weui-cell weui-cell_access ">
+            <div class="weui-cell__bd">
+                <p>常德</p>
+            </div>
+        </div>
+        <div class="weui-cell weui-cell_access ">
+            <div class="weui-cell__bd">
+                <p>昌都地区</p>
+            </div>
+        </div>
+        <div class="weui-cell weui-cell_access ">
+            <div class="weui-cell__bd">
+                <p>长沙</p>
+            </div>
+        </div>
+      </div>
+      <!-- end C -->
+    </div>
+  </div>
+  <script type="text/javascript" src="js/zepto.min.js"></script>
+  <script type="text/javascript">
+
+  </script>
+</body>
+</html>
