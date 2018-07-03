@@ -14,7 +14,7 @@
     .search.do:after{content:"";position:absolute;left:0;right:0;bottom:0;border-bottom:1px solid #e5e5e5;transform: scaleY(0.5);}
     .search.do .search-button{display: none;}
     .search.do .search-cancel{display: inline;}
-    .location{padding-left:15px;position: relative;padding-right:32px;line-height: 45px;font-weight: 400;color:#555;}
+    .location{padding-left:15px;position: relative;padding-right:32px;line-height: 45px;font-weight:600;color:#555;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width:4em;}
     .location:active{background-color: #f8f8f9;}
     .location:after{content:"";height: 6px;width: 6px;border-width: 2px 2px 0 0;border-color: #c8c8cd;border-style:solid;position:absolute;top:50%;margin-top: -6px;right: 10px;transform:rotate(135deg);}
     .search-input{flex:1;position: relative;padding-left:15px;}
@@ -22,17 +22,21 @@
     .search-input .weui-input{height:45px;}
     .search-button{line-height: 45px;padding:0 15px;}
     .search-cancel{display: none;line-height: 45px;padding:0 15px;}
-    .map{height:100%;background: url(images/map.jpg) center top / 100% auto no-repeat;}
+    .map{height:100%;width:100%;background: url(images/map.jpg) center top / 100% auto no-repeat;}
 
-    .big-button{height:72px;width:72px;border-radius: 100%;position: absolute;bottom:48px;background:#19be6b url(images/icon_lighting@3x.png) center center / 100% 100% no-repeat;left:50%;margin-left:-36px;opacity: .8;}
+    .big-button{height:72px;width:72px;border-radius: 100%;position: absolute;bottom:48px;background:#19be6b url(images/icon_lighting@3x.png) center center / 100% 100% no-repeat;left:50%;margin-left:-36px;opacity: .8;transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);}
     .big-button:active{opacity:1;}
     .big-button:after{content:"";border:10px solid rgba(255,255,255,.5);height:72px;width:72px;position:absolute;left:50%;top:50%;margin:-46px 0 0 -46px;border-radius:100%;}
+    .big-button #eee{display:none;border-radius:100%;}
+    .big-button.showFire{background-position: center -80px;}
+    .big-button.showFire #eee{display: block;}
 
-    .search-panel{position: absolute;left:0;top:45px;right:0;bottom:0;z-index:200;background-color: #FFF;transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);box-sizing: border-box;overflow: hidden;overflow-y: auto;-webkit-overflow-scrolling: touch;transform:translateY(100%);opacity:0;}
+    .search-panel{position: fixed;left:0;top:45px;right:0;bottom:0;z-index:200;background-color: #FFF;transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);box-sizing: border-box;overflow: hidden;overflow-y: auto;-webkit-overflow-scrolling: touch;transform:translateY(100%);opacity:0;}
     .search-panel.show{transform:translateY(0);opacity: 1;}
 
     .history-list{margin-bottom:15px;padding:0 15px;}
     .history-list a{display: inline-block;border-radius: 48px;background-color:#f8f8f9;padding:5px 15px;margin:0 10px 10px 0;color:#888;}
+    .history-list a:active{background-color:#e2e3e4;}
   </style>
 </head>
 <body>
@@ -45,15 +49,8 @@
         <span class="search-cancel">取消</span>
       </div>
       <div class="map"></div>
-      <div class="big-button">
-        <svg viewBox="0 0 100 100">
-          <path d="M 50,50 m 0,-47
-              a 47,47 0 1 1 0,94
-              a 47,47 0 1 1 0,-94" stroke="#eaeef2" stroke-width="5" fill-opacity="0"></path>
-          <path d="M 50,50 m 0,-47
-              a 47,47 0 1 1 0,94
-              a 47,47 0 1 1 0,-94" stroke-linecap="round" :stroke="color" stroke-width="6" fill-opacity="0" style="stroke-dasharray:295.31px, 295.31px; stroke-dashoffset:295.31px; transition: stroke-dashoffset 0.6s ease 0s, stroke 0.6s ease;" :style="{strokeDashoffset: pppp + 'px'}"></path>
-        </svg>
+      <div class="big-button" id="bigButton">
+        <canvas id="eee" style="width:100%;height:100%;"></canvas>
       </div>
       <div class="search-panel" id="searchPanel">
         <div class="weui-cells__title">搜索历史</div>
@@ -64,6 +61,7 @@
     </div>
   </div>
   <script type="text/javascript" src="js/zepto.min.js"></script>
+  <script type="text/javascript" src="js/canvas.js"></script>
   <script type="text/javascript">
     $(function(){
       //搜索框获取焦点时候显示搜索结果容器
@@ -75,6 +73,11 @@
       $(".search-cancel").on("click",function(){
         $("#searchPanel").removeClass("show");
         $(".search").removeClass("do");
+      });
+      //点击大按钮
+      $("#bigButton").click(function(){
+        $(this).addClass("showFire");
+        fire();
       });
     })
   </script>
