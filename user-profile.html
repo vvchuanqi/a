@@ -34,36 +34,38 @@
       <!-- end 用户头像和用户名 -->
       <!-- start 用户个人菜单列表 -->
       <div class="weui-cells">
-            <a class="weui-cell weui-cell_access" href="shouji.html">
+            <div class="weui-cell">
+                <div class="weui-cell__hd"><label class="weui-label">手机号</label></div>
                 <div class="weui-cell__bd">
-                    <p>绑定手机号</p>
+                    <input class="weui-input" type="tel" pattern="^\d{11}$" maxlength="11" placeholder="输入你现在的手机号" value="13798979772">
                 </div>
-                <div class="weui-cell__ft">13798979772</div>
-            </a>
-            <a class="weui-cell weui-cell_access" href="nicheng.html">
+            </div>
+            <div class="weui-cell">
+                <div class="weui-cell__hd"><label class="weui-label">昵称</label></div>
                 <div class="weui-cell__bd">
-                    <p>昵称</p>
+                    <p class="text-muted">张三</p>
                 </div>
-                <div class="weui-cell__ft">张三</div>
-            </a>
-            <a class="weui-cell weui-cell_access" href="xingming.html">
+            </div>
+            <div class="weui-cell">
+                <div class="weui-cell__hd"><label class="weui-label">真实姓名</label></div>
                 <div class="weui-cell__bd">
-                    <p>真实姓名</p>
+                    <input class="weui-input" type="text" placeholder="输入真实姓名" value="张三丰">
                 </div>
-                <div class="weui-cell__ft">张三丰</div>
-            </a>
+            </div>
             <a class="weui-cell weui-cell_access" href="chexing.html">
+                <div class="weui-cell__hd"><label class="weui-label">车型</label></div>
                 <div class="weui-cell__bd">
-                    <p>车型</p>
+                    <span>特斯拉</span> <span>MODEL</span> <span>3</span>
                 </div>
-                <div class="weui-cell__ft"><span>特斯拉</span> <span>MODEL</span> <span>3</span></div>
+                <div class="weui-cell__ft"></div>
             </a>
-            <a class="weui-cell weui-cell_access" href="chepai.html">
-                <div class="weui-cell__bd">
-                    <p>车牌号</p>
+            <div class="weui-cell">
+                <div class="weui-cell__hd"><label class="weui-label">车牌号</label></div>
+                <div class="weui-cell__bd" id="multiPickerBtn" style="margin-right:15px;border-right:1px solid #e5e5e5;">
+                    <span id="province">京</span> <span id="letter">A</span>
                 </div>
-                <div class="weui-cell__ft"><span>京</span><span>A</span><span>585858</span></div>
-            </a>
+                <div class="weui-cell__bd"><input class="weui-input" type="text" placeholder="请输入车牌号" value=""></div>
+            </div>
         </div>
 
         <div class="weui-cells">
@@ -79,8 +81,43 @@
     </div>
   </div>
   <script type="text/javascript" src="js/zepto.min.js"></script>
+  <script type="text/javascript" src="js/weui.min.js"></script>
   <script type="text/javascript">
-
+  // 多列选择器
+$('#multiPickerBtn').on('click', function () {
+    weui.picker([{
+        label: '京',
+        value: '1'
+    }, {
+        label: '津',
+        value: '2'
+    }, {
+        label: '粤',
+        value: '3'
+    }], [{
+        label: 'A',
+        value: 'A'
+    }, {
+        label: 'B',
+        value: 'B'
+    }, {
+        label: 'C',
+        value: 'C'
+    }], {
+        defaultValue: ['3', 'C'],
+        onChange: function onChange(result) {
+            console.log(result);
+        },
+        onConfirm: function onConfirm(result) {
+            console.log(result);
+            console.log(result[0].label);
+            console.log(result[1].label);
+            $("#province").text(result[0].label);
+            $("#letter").text(result[1].label);
+        },
+        id: 'multiPickerBtn'
+    });
+});
   </script>
 </body>
 </html>
