@@ -17,6 +17,7 @@
     .block-item strong{display: block;font-size:14px;font-weight: lighter;opacity:.5;}
     .account-money .number{font-size:24px;}
     .account-statistics .number{font-size:14px;}
+    .account-statistics:before{content:"本月统计";position: absolute;left:50%;top:-12px;background-color:#e2e3e4;color:#FFF;border-radius: 40px;transform: translateX(-50%);font-size:12px;padding:2px 10px;}
   </style>
 </head>
 <body>
@@ -44,7 +45,7 @@
       <!-- end 账户余额和用户积分 -->
       <!-- start 本月充电统计 -->
       <div class="weui-flex account-statistics">
-            <div class="weui-flex__item"><div class="block-item"><span class="price number text-success">375.00</span><strong>本月消费</strong></div></div>
+            <div class="weui-flex__item"><div class="block-item"><span class="price number text-success">375.00</span><strong>充电消费</strong></div></div>
             <div class="weui-flex__item"><div class="block-item"><span class="number text-warning">50瓦</span><strong>累计电量</strong></div></div>
             <div class="weui-flex__item"><div class="block-item"><span class="number text-success">6次</span><strong>充电次数</strong></div></div>
             <div class="weui-flex__item"><div class="block-item"><span class="number text-warning">40小时</span><strong>充电时长</strong></div></div>
