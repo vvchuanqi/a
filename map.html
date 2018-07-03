@@ -24,9 +24,9 @@
     .search-cancel{display: none;line-height: 45px;padding:0 15px;}
     .map{height:100%;width:100%;background: url(images/map.jpg) center top / 100% auto no-repeat;}
 
-    .big-button{height:72px;width:72px;border-radius: 100%;position: absolute;bottom:48px;background:#19be6b url(images/icon_lighting@3x.png) center center / 100% 100% no-repeat;left:50%;margin-left:-36px;opacity: .8;transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);}
+    .big-button{height:72px;width:72px;border-radius: 100%;position: absolute;bottom:48px;background:#19be6b url(images/icon_lighting@3x.png) center center / 100% 100% no-repeat;left:50%;margin-left:-36px;opacity: .8;transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);box-shadow:0 1px 5px rgba(0,0,0,.2);}
     .big-button:active{opacity:1;}
-    .big-button:after{content:"";border:10px solid rgba(255,255,255,.5);height:72px;width:72px;position:absolute;left:50%;top:50%;margin:-46px 0 0 -46px;border-radius:100%;}
+    .big-button:after{content:"";border:10px solid rgba(255,255,255,.5);height:72px;width:72px;position:absolute;left:50%;top:50%;margin:-46px 0 0 -46px;border-radius:100%;box-shadow:0 1px 15px rgba(0,0,0,.2);}
     .big-button #eee{display:none;border-radius:100%;}
     .big-button.showFire{background-position: center -80px;}
     .big-button.showFire #eee{display: block;}
@@ -34,7 +34,7 @@
     .search-panel{position: fixed;left:0;top:45px;right:0;bottom:0;z-index:200;background-color: #FFF;transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);box-sizing: border-box;overflow: hidden;overflow-y: auto;-webkit-overflow-scrolling: touch;transform:translateY(100%);opacity:0;}
     .search-panel.show{transform:translateY(0);opacity: 1;}
 
-    .history-list{margin-bottom:15px;padding:0 15px;}
+    .history-list{margin:15px 0 15px;padding:0 15px;}
     .history-list a{display: inline-block;border-radius: 48px;background-color:#f8f8f9;padding:5px 15px;margin:0 10px 10px 0;color:#888;}
     .history-list a:active{background-color:#e2e3e4;}
   </style>
@@ -53,7 +53,7 @@
         <canvas id="eee" style="width:100%;height:100%;"></canvas>
       </div>
       <div class="search-panel" id="searchPanel">
-        <div class="weui-cells__title">搜索历史</div>
+        <div class="weui-cells__title">搜索历史 <a href="javascript:;"></a></div>
         <div class="history-list">
           <a href="#">特斯拉</a><a href="#">特斯乐</a><a href="#">远光</a><a href="#">充电桩</a><a href="#">充电站</a>
         </div>
