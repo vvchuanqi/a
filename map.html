@@ -9,22 +9,27 @@
   <link rel="stylesheet" href="css/global.css">
   <style>
     .page-content{position: relative;}
-    .search{position:absolute;left:16px;right:16px;top:16px;background-color: #FFF;border-radius: 2px;display: flex;flex-flow:row;}
+    .search{position:absolute;left:16px;right:16px;top:16px;background-color: #FFF;border-radius:2px;display:flex;flex-flow:row;}
+    .location{padding-left:15px;position: relative;padding-right:32px;line-height: 45px;}
+    .location:active{background-color: #f8f8f9;}
+    .location:after{content:"";height: 6px;width: 6px;border-width: 2px 2px 0 0;border-color: #c8c8cd;border-style:solid;position:absolute;top:50%;margin-top: -6px;right: 10px;transform:rotate(135deg);}
+    .search-input{flex:1;position: relative;padding-left:15px;}
+    .search-input:after{content:"";position:absolute;top:5px;bottom:5px;border-left:1px solid #e5e5e5;transform: scaleX(0.5);left:0;}
+    .search-input .weui-input{height:45px;}
+    .search-button{line-height: 45px;padding:0 15px;}
     .map{height:100%;background: url(images/map.jpg) center top / 100% auto no-repeat;}
   </style>
 </head>
 <body>
   <div class="page">
-    <div class="page-header">
-      <a href="index.html" class="header-btn-left header-btn-left__access">我要充电</a>
-    </div>
     <div class="page-content">
       <div class="search">
-        <span>珠海</span>
-        <span><input type="text" class="weui-input" placeholder="请输入关键字"></span>
+        <span class="location">珠海</span>
+        <span class="search-input"><input type="text" class="weui-input" placeholder="请输入关键字"></span>
+        <span class="search-button"><i class="weui-icon-search"></i></span>
       </div>
       <div class="map"></div>
-      
+
     </div>
   </div>
   <script type="text/javascript" src="js/zepto.min.js"></script>
