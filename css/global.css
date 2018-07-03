@@ -1,7 +1,7 @@
 /* start 全局的布局框架 */
 html,body,.page{height:100%;margin:0;padding:0;}
 .page{display:flex;flex-flow: column;}
-.page-header{height:50px;background-color:#303030;}
+.page-header{height:50px;background-color:#303030;display:none;}
 .page-content{flex:1;background-color: #f8f8f9;overflow-y: auto;-webkit-overflow-scrolling: touch;}
 /* end 全局的布局框架 */
 
