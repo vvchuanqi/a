@@ -8,12 +8,15 @@
   <link rel="stylesheet" href="css/weui.min.css">
   <link rel="stylesheet" href="css/global.css">
   <style>
-    .account-money{background-color: #FFF;}
-    .account-money .weui-flex__item:first-child{position: relative;}
-    .account-money .weui-flex__item:first-child::after{content:"";top:15px;right:0;bottom:15px;position: absolute;border-left:1px solid #e5e5e5;transform: scaleX(0.5);}
+    .account-money,.account-statistics{background-color: #FFF;position: relative;}
+    .account-money:after,.account-statistics:after{content:"";position: absolute;left:0;right:0;bottom:0;border-bottom:1px solid #e5e5e5;transform: scaleY(0.5);}
+    .account-money .weui-flex__item:first-child,.account-statistics .weui-flex__item{position: relative;}
+    .account-money .weui-flex__item:first-child::after,.account-statistics .weui-flex__item::after{content:"";top:15px;right:0;bottom:15px;position: absolute;border-left:1px solid #e5e5e5;transform: scaleX(0.5);}
+    .account-statistics .weui-flex__item:last-child::after{display: none;}
     .block-item{padding:15px;border-radius: 12px;text-align:center;}
     .block-item strong{display: block;font-size:14px;font-weight: lighter;opacity:.5;}
-    .block-item .number{font-size:24px;}
+    .account-money .number{font-size:24px;}
+    .account-statistics .number{font-size:14px;}
   </style>
 </head>
 <body>
@@ -37,8 +40,16 @@
       <div class="weui-flex account-money">
             <div class="weui-flex__item"><div class="block-item"><span class="price number text-success">375.00</span><strong>账户余额</strong></div></div>
             <div class="weui-flex__item"><div class="block-item"><span class="number text-warning">1000</span><strong>我的积分</strong></div></div>
-        </div>
+      </div>
       <!-- end 账户余额和用户积分 -->
+      <!-- start 本月充电统计 -->
+      <div class="weui-flex account-statistics">
+            <div class="weui-flex__item"><div class="block-item"><span class="price number text-success">375.00</span><strong>本月消费</strong></div></div>
+            <div class="weui-flex__item"><div class="block-item"><span class="number text-warning">1000</span><strong>累计电量</strong></div></div>
+            <div class="weui-flex__item"><div class="block-item"><span class="number text-success">375.00</span><strong>充电次数</strong></div></div>
+            <div class="weui-flex__item"><div class="block-item"><span class="number text-warning">1000</span><strong>充电时长</strong></div></div>
+      </div>
+      <!-- end 本月充电统计 -->
       <!-- start 用户个人菜单列表 -->
       <div class="weui-cells">
             <a class="weui-cell weui-cell_access" href="chongzhi.html">
