@@ -115,19 +115,22 @@
                 console.log(result[1].label);
                 $("#province").text(result[0].label);
                 $("#letter").text(result[1].label);
-                $("#btnSave").removeClass("weui-btn_disabled");
+                $("#btnSave").removeClass("weui-btn_disabled").bind("click");
             },
             id: 'multiPickerBtn'
         });
       //保存数据
-      $("#btnSave").click(function(){
+      $("#btnSave").bind("click",function(){
           $("#btnSave").text("保存中").addClass("weui-btn_loading").prepend("<i class='weui-loading'></i>");
-          var loading = weui.loading('loading');
           setTimeout(function () {
-              loading.hide();
-              $("#btnSave").text("保存").addClass("weui-btn_disabled");
+              weui.toast('保存成功', {
+                 duration: 3000,
+                 className: "bears"
+               });
+              $("#btnSave").text("保存").removeClass("weui-btn_loading").addClass("weui-btn_disabled");
               //window.location.href="user.html";
           }, 3000);
+          $(this).unbind("click");
       });
     });
   </script>
