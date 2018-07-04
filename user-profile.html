@@ -122,8 +122,11 @@
       //保存数据
       $("#btnSave").click(function(){
           $("#btnSave").text("保存中").addClass("weui-btn_loading").prepend("<i class='weui-loading'></i>");
+          var loading = weui.loading('loading');
           setTimeout(function () {
-              window.location.href="user.html";
+              loading.hide();
+              $("#btnSave").text("保存").addClass("weui-btn_disabled");
+              //window.location.href="user.html";
           }, 3000);
       });
     });
