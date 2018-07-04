@@ -28,28 +28,28 @@
                 <div class="weui-cell__bd">
                     <p>头像</p>
                 </div>
-                <div class="weui-cell__ft"><img src="images/avatar.jpg" alt="" style="width:80px;border-radius: 100%;margin-right:16px;display:block"></div>
+                <div><img src="images/avatar.jpg" alt="" style="width:80px;border-radius: 100%;display:block"></div>
             </a>
         </div>
       <!-- end 用户头像和用户名 -->
-      <!-- start 用户个人菜单列表 -->
+      <!-- start 用户个人信息列表 -->
       <div class="weui-cells">
             <div class="weui-cell">
                 <div class="weui-cell__hd"><label class="weui-label">手机号</label></div>
                 <div class="weui-cell__bd">
-                    <input class="weui-input" type="tel" pattern="^\d{11}$" maxlength="11" placeholder="输入你现在的手机号" value="13798979772">
+                    <input class="weui-input" type="tel" pattern="^\d{11}$" maxlength="11" placeholder="输入你现在的手机号" value="13798979772" id="tel">
                 </div>
             </div>
             <div class="weui-cell">
-                <div class="weui-cell__hd"><label class="weui-label">昵称</label></div>
+                <div class="weui-cell__hd"><label class="weui-label">微信号</label></div>
                 <div class="weui-cell__bd">
-                    <p class="text-muted">张三</p>
+                    <p class="text-muted">zsanv587</p>
                 </div>
             </div>
             <div class="weui-cell">
                 <div class="weui-cell__hd"><label class="weui-label">真实姓名</label></div>
                 <div class="weui-cell__bd">
-                    <input class="weui-input" type="text" placeholder="输入真实姓名" value="张三丰">
+                    <input class="weui-input" type="text" placeholder="输入真实姓名" value="张三丰" id="name">
                 </div>
             </div>
             <a class="weui-cell weui-cell_access" href="chexing.html">
@@ -77,47 +77,56 @@
               </a>
           </div> -->
 
-      <!-- start 用户个人菜单列表 -->
+      <!-- start 用户个人信息列表 -->
+      <div class="weui-btn-area"> <a href="#" class="weui-btn weui-btn_disabled weui-btn_primary" id="btnSave">保存</a> </div>
     </div>
   </div>
   <script type="text/javascript" src="js/zepto.min.js"></script>
   <script type="text/javascript" src="js/weui.min.js"></script>
   <script type="text/javascript">
-  // 多列选择器
-$('#multiPickerBtn').on('click', function () {
-    weui.picker([{
-        label: '京',
-        value: '1'
-    }, {
-        label: '津',
-        value: '2'
-    }, {
-        label: '粤',
-        value: '3'
-    }], [{
-        label: 'A',
-        value: 'A'
-    }, {
-        label: 'B',
-        value: 'B'
-    }, {
-        label: 'C',
-        value: 'C'
-    }], {
-        defaultValue: ['3', 'C'],
-        onChange: function onChange(result) {
-            console.log(result);
-        },
-        onConfirm: function onConfirm(result) {
-            console.log(result);
-            console.log(result[0].label);
-            console.log(result[1].label);
-            $("#province").text(result[0].label);
-            $("#letter").text(result[1].label);
-        },
-        id: 'multiPickerBtn'
+    // 多列选择器
+    $('#multiPickerBtn').on('click', function () {
+        weui.picker([{
+            label: '京',
+            value: '1'
+        }, {
+            label: '津',
+            value: '2'
+        }, {
+            label: '粤',
+            value: '3'
+        }], [{
+            label: 'A',
+            value: 'A'
+        }, {
+            label: 'B',
+            value: 'B'
+        }, {
+            label: 'C',
+            value: 'C'
+        }], {
+            defaultValue: ['3', 'C'],
+            onChange: function onChange(result) {
+                console.log(result);
+            },
+            onConfirm: function onConfirm(result) {
+                console.log(result);
+                console.log(result[0].label);
+                console.log(result[1].label);
+                $("#province").text(result[0].label);
+                $("#letter").text(result[1].label);
+                $("#btnSave").removeClass("weui-btn_disabled");
+            },
+            id: 'multiPickerBtn'
+        });
+      //保存数据
+      $("#btnSave").click(function(){
+          $("#btnSave").text("保存中").addClass("weui-btn_loading").prepend("<i class='weui-loading'></i>");
+          setTimeout(function () {
+              window.location.href="user.html";
+          }, 3000);
+      });
     });
-});
   </script>
 </body>
 </html>
