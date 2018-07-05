@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>充电记录</title>
+  <link rel="stylesheet" href="css/weui.min.css">
+  <link rel="stylesheet" href="css/global.css">
+  <style>
+
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="page-content">
+      <!-- start 页签 -->
+      <div class="weui-tab">
+          <div class="weui-navbar">
+              <div class="weui-navbar__item weui-bar__item_on">
+                  全部
+              </div>
+              <div class="weui-navbar__item">
+                  预约
+              </div>
+              <div class="weui-navbar__item">
+                  充电中
+              </div>
+              <div class="weui-navbar__item">
+                  待评价
+              </div>
+              <div class="weui-navbar__item">
+                  已完成
+              </div>
+          </div>
+          <div class="weui-tab__panel">
+            dsfsdf
+          </div>
+      </div>
+      <!-- end 页签 -->
+    </div>
+  </div>
+  <script type="text/javascript" src="js/zepto.min.js"></script>
+  <script type="text/javascript" src="js/weui.min.js"></script>
+  <script type="text/javascript">
+    //
+    $(function(){
+        $('.weui-navbar__item').on('click', function () {
+            $(this).addClass('weui-bar__item_on').siblings('.weui-bar__item_on').removeClass('weui-bar__item_on');
+        });
+    });
+  </script>
+</body>
+</html>

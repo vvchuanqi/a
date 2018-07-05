@@ -31,12 +31,19 @@
     .big-button.showFire{background-position: center -80px;}
     .big-button.showFire #eee{display: block;}
 
-    .search-panel{position: fixed;left:0;top:45px;right:0;bottom:0;z-index:200;background-color: #FFF;transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);box-sizing: border-box;overflow: hidden;overflow-y: auto;-webkit-overflow-scrolling: touch;transform:translateY(100%);opacity:0;}
+    .search-panel{position: fixed;left:0;top:45px;right:0;bottom:0;z-index:200;background-color: #f8f8f9;transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);box-sizing: border-box;overflow: hidden;overflow-y: auto;-webkit-overflow-scrolling: touch;transform:translateY(100%);opacity:0;}
     .search-panel.show{transform:translateY(0);opacity: 1;}
+
+    .search-history,.search-result{background-color: #FFFFFF;}
 
     .history-list{margin:15px 0 15px;padding:0 15px;}
     .history-list a{display: inline-block;border-radius: 48px;background-color:#f8f8f9;padding:5px 15px;margin:0 10px 10px 0;color:#888;}
     .history-list a:active{background-color:#e2e3e4;}
+
+    .search-result{transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);transform:translateY(100%);opacity:0;}
+    .search-result.showResult{transform:translateY(0);opacity:1;}
+    .search-result .weui-media-box{display: block;}
+    .weui-media-box .right-absolute{position: absolute;right:16px;top:16px;font-size:14px;color:#999;}
   </style>
 </head>
 <body>
@@ -53,10 +60,88 @@
         <canvas id="eee" style="width:100%;height:100%;"></canvas>
       </div>
       <div class="search-panel" id="searchPanel">
-        <div class="weui-cells__title">搜索历史 <a href="javascript:;"></a></div>
-        <div class="history-list">
-          <a href="#">特斯拉</a><a href="#">特斯乐</a><a href="#">远光</a><a href="#">充电桩</a><a href="#">充电站</a>
+        <!-- start 搜索历史 -->
+        <div class="search-history">
+          <div class="weui-cells__title">搜索历史 <a href="javascript:;"></a></div>
+          <div class="history-list">
+            <a href="#">特斯拉</a><a href="#">特斯乐</a><a href="#">远光</a><a href="#">充电桩</a><a href="#">充电站</a>
+          </div>
         </div>
+        <!-- end 搜索历史 -->
+        <!-- start 搜索结果列表 -->
+        <div class="search-result">
+          <a class="weui-media-box weui-media-box_text" href="javascript:;">
+              <h4 class="weui-media-box__title">庞大桩内部测试充电桩</h4>
+              <p class="weui-media-box__desc">广东省珠海市吉大石花西路60号泰坦科技园</p>
+              <ul class="weui-media-box__info">
+                  <li class="weui-media-box__info__meta text-warning">公共</li>
+                  <li class="weui-media-box__info__meta weui-media-box__info__meta_extra text-success">空闲：5</li>
+                  <li class="weui-media-box__info__meta weui-media-box__info__meta_extra text-primary">总桩数：10</li>
+              </ul>
+              <span class="right-absolute">30m</span>
+          </a>
+          <a class="weui-media-box weui-media-box_text" href="javascript:;">
+              <h4 class="weui-media-box__title">驿联新能源汽车体验馆充电站</h4>
+              <p class="weui-media-box__desc">珠海市吉大石花西路68号</p>
+              <ul class="weui-media-box__info">
+                  <li class="weui-media-box__info__meta text-warning">公共</li>
+                  <li class="weui-media-box__info__meta weui-media-box__info__meta_extra text-success">空闲：5</li>
+                  <li class="weui-media-box__info__meta weui-media-box__info__meta_extra text-primary">总桩数：10</li>
+              </ul>
+              <span class="right-absolute">35m</span>
+          </a>
+          <a class="weui-media-box weui-media-box_text" href="javascript:;">
+              <h4 class="weui-media-box__title">泰坦大院充电桩</h4>
+              <p class="weui-media-box__desc">广东省珠海市吉大石花西路60号泰坦科技园</p>
+              <ul class="weui-media-box__info">
+                  <li class="weui-media-box__info__meta text-warning">公共</li>
+                  <li class="weui-media-box__info__meta weui-media-box__info__meta_extra text-success">空闲：5</li>
+                  <li class="weui-media-box__info__meta weui-media-box__info__meta_extra text-primary">总桩数：10</li>
+              </ul>
+              <span class="right-absolute">47m</span>
+          </a>
+          <a class="weui-media-box weui-media-box_text" href="javascript:;">
+              <h4 class="weui-media-box__title">三和超市自营充电站</h4>
+              <p class="weui-media-box__desc">广东省珠海市港湾大道60号南方科技园</p>
+              <ul class="weui-media-box__info">
+                  <li class="weui-media-box__info__meta text-warning">公共</li>
+                  <li class="weui-media-box__info__meta weui-media-box__info__meta_extra text-success">空闲：5</li>
+                  <li class="weui-media-box__info__meta weui-media-box__info__meta_extra text-primary">总桩数：10</li>
+              </ul>
+              <span class="right-absolute">55m</span>
+          </a>
+          <a class="weui-media-box weui-media-box_text" href="javascript:;">
+              <h4 class="weui-media-box__title">远光软件充电站</h4>
+              <p class="weui-media-box__desc">广东省珠海市港湾大道2号远光科技园</p>
+              <ul class="weui-media-box__info">
+                  <li class="weui-media-box__info__meta text-warning">公共</li>
+                  <li class="weui-media-box__info__meta weui-media-box__info__meta_extra text-success">空闲：5</li>
+                  <li class="weui-media-box__info__meta weui-media-box__info__meta_extra text-primary">总桩数：10</li>
+              </ul>
+              <span class="right-absolute">60m</span>
+          </a>
+          <a class="weui-media-box weui-media-box_text" href="javascript:;">
+              <h4 class="weui-media-box__title">唐家湾镇轻轨站充电站</h4>
+              <p class="weui-media-box__desc">广东省珠海市金峰路44号唐家湾轻轨站</p>
+              <ul class="weui-media-box__info">
+                  <li class="weui-media-box__info__meta text-warning">公共</li>
+                  <li class="weui-media-box__info__meta weui-media-box__info__meta_extra text-success">空闲：5</li>
+                  <li class="weui-media-box__info__meta weui-media-box__info__meta_extra text-primary">总桩数：10</li>
+              </ul>
+              <span class="right-absolute">88m</span>
+          </a>
+          <a class="weui-media-box weui-media-box_text" href="javascript:;">
+              <h4 class="weui-media-box__title">金鼎充电站</h4>
+              <p class="weui-media-box__desc">广东省珠海市金峰路180号世纪百货公司斜对面</p>
+              <ul class="weui-media-box__info">
+                  <li class="weui-media-box__info__meta text-warning">公共</li>
+                  <li class="weui-media-box__info__meta weui-media-box__info__meta_extra text-success">空闲：8</li>
+                  <li class="weui-media-box__info__meta weui-media-box__info__meta_extra text-primary">总桩数：20</li>
+              </ul>
+              <span class="right-absolute">90m</span>
+          </a>
+        </div>
+        <!-- end 搜索结果列表 -->
       </div>
     </div>
   </div>
@@ -78,6 +163,15 @@
       $("#bigButton").click(function(){
         $(this).addClass("showFire");
         fire();
+      });
+      //点击搜索历史标签
+      $(".history-list a").each(function(){
+        $(this).on("click",function(){
+          var textTag = $.trim($(this).text());
+          $("#topSearch").val(textTag);
+          $(".search-history").hide();
+          $(".search-result").addClass("showResult")
+        })
       });
     })
   </script>
