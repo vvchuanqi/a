@@ -68,7 +68,21 @@
   <script type="text/javascript">
     //
     $(function(){
-
+      //点击收藏
+      $(".btn-fav").click(function(){
+        if($(this).hasClass("active")){
+          $(this).removeClass("active");
+            weui.toast('已取消收藏', {
+                duration: 2000,
+            });
+        }
+        else{
+          $(this).addClass("active");
+            weui.toast('收藏成功', {
+                duration: 2000,
+            });
+        }
+      });
     });
   </script>
 </body>
