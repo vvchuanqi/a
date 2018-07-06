@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>充电站详情</title>
+  <link rel="stylesheet" href="css/weui.min.css">
+  <link rel="stylesheet" href="css/global.css">
+  <style>
+    .about{background:#FFF; position: relative;}
+    .about .btn-fav{position: absolute;top:15px;right:15px;height:48px;width:48px;background: url(images/icon_fav.png) center center / 48px 48px no-repeat;}
+    .about .btn-fav.active,.about .btn-fav:active{background-image:url(images/icon_faved.png);}
+    .about .cover{display:block;width:100%;}
+    .about .weui-media-box__hd{margin:0 0 0 15px;}
+  </style>
+</head>
+<body>
+  <div class="page">
+    <!-- start 充电站详情入口 -->
+    <div class="about">
+      <a href="#" class="btn-fav"></a>
+      <img src="images/img_chongdianzhan.jpg" alt="唐家湾镇轻轨站充电站" class="cover">
+      <a href="javascript:void(0);" class="weui-media-box weui-media-box_appmsg">
+          <div class="weui-media-box__bd">
+              <h4 class="weui-media-box__title">唐家湾镇轻轨站充电站</h4>
+              <p class="weui-media-box__desc">唐家湾镇金凤路128号唐家湾轻轨站停车场</p>
+          </div>
+          <div class="weui-media-box__hd">
+              <img class="weui-media-box__thumb" src="images/icon_mark_big.png" alt="">
+          </div>
+      </a>
+    </div>
+    <!-- end 充电站详情入口 -->
+    <div class="page-content">
+      <!-- start 内容区 -->
+      <div class="weui-cells">
+        <div class="weui-cell">
+            <div class="weui-cell__bd">
+                <p>电费</p>
+            </div>
+            <div class="weui-cell__ft">1.05 ~ 1.05 元/度</div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__bd">
+                <p>服务费</p>
+            </div>
+            <div class="weui-cell__ft">0.6 ~ 0.6 元/度</div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__bd">
+                <p>占桩费</p>
+            </div>
+            <div class="weui-cell__ft">0.1 ~ 0.1 元/分钟</div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__bd">
+                <p>停车费</p>
+            </div>
+            <div class="weui-cell__ft">0.00 元/小时</div>
+        </div>
+      </div>
+      <!-- end 内容区 -->
+    </div>
+  </div>
+  <script type="text/javascript" src="js/zepto.min.js"></script>
+  <script type="text/javascript" src="js/weui.min.js"></script>
+  <script type="text/javascript">
+    //
+    $(function(){
+
+    });
+  </script>
+</body>
+</html>
