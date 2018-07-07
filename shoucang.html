@@ -185,7 +185,7 @@
         $(".fav").on("click",function(e){e.preventDefault();
             var _this = $(this);
             _this.removeClass("active");
-            weui.toast('取消收藏', {duration: 3000,});
+            weui.toast('取消收藏', {duration:1500,});
             setTimeout(function () {_this.parents(".weui-media-box").hide(200);}, 1000);
 
         });

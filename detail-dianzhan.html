@@ -60,7 +60,11 @@
             <div class="weui-cell__ft">0.00 元/小时</div>
         </div>
       </div>
+      <div class="weui-btn-area">
+            <a class="weui-btn weui-btn_primary" href="javascript:" id="fenXiang">分享</a>
+        </div>
       <!-- end 内容区 -->
+
     </div>
   </div>
   <script type="text/javascript" src="js/zepto.min.js"></script>
@@ -83,6 +87,32 @@
             });
         }
       });
+      //分享充电站
+      $("#fenXiang").on("click",function(){
+        weui.actionSheet([{
+    	        label: '微信',
+    	        onClick: function onClick() {
+    	            console.log('微信');
+    	        }
+    	    }, {
+    	        label: 'QQ',
+    	        onClick: function onClick() {
+    	            console.log('QQ');
+    	        }
+    	    }, {
+    	        label: '新浪微博',
+    	        onClick: function onClick() {
+    	            console.log('新浪微博');
+    	        }
+    	    }], [{
+    	        label: '取消',
+    	        onClick: function onClick() {
+    	            console.log('取消');
+    	        }
+    	    }], {
+    	        className: "custom-classname"
+    	    });
+      })
     });
   </script>
 </body>
