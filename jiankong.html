@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>充电监控</title>
+  <link rel="stylesheet" href="css/weui.min.css">
+  <link rel="stylesheet" href="css/global.css">
+  <style>
+      .weui-panel{margin-bottom:15px;}
+      .weui-media-box__title{position: relative;}
+      .percent{height:36px;position: absolute;left:0;right:0;top:50%;margin-top:-18px;line-height: 36px;text-align: center;font-size:28px;color:#3cc51f;}
+      .svg{height:120px;width:120px;display: block;margin:0 auto;}
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="page-content">
+      <!-- start 实时监控 -->
+      <div class="weui-panel">
+            <div class="weui-panel__hd">唐家湾镇轻轨站充电站</div>
+            <div class="weui-panel__bd">
+                <div class="weui-media-box weui-media-box_text">
+                    <h4 class="weui-media-box__title"><div class="percent">75%</div><svg viewBox="0 0 100 100" class="svg"><path d="M 50 50 m 0 -47 a 47 47 0 1 1 0 94 a 47 47 0 1 1 0 -94" stroke="#e5e9f2" stroke-width="6" fill="none" class="el-progress-circle__track"></path><path d="M 50 50 m 0 -47 a 47 47 0 1 1 0 94 a 47 47 0 1 1 0 -94" stroke-linecap="round" stroke="#13ce66" stroke-width="6" fill="none" class="el-progress-circle__path" style="stroke-dasharray: 223.08px, 299.08px; stroke-dashoffset: 0px; transition: stroke-dashoffset 0.6s ease 0s, stroke 0.6s ease;"></path></svg></h4>
+                </div>
+            </div>
+        </div>
+
+      <div class="weui-form-preview">
+        <div class="weui-form-preview__hd"><label class="weui-form-preview__label">实时充电金额</label> <em class="weui-form-preview__value">¥24.00</em></div>
+        <div class="weui-form-preview__bd">
+          <div class="weui-form-preview__item"><label class="weui-form-preview__label">充电时长</label> <span class="weui-form-preview__value">15分钟46秒</span></div>
+          <div class="weui-form-preview__item"><label class="weui-form-preview__label">电费</label> <span class="weui-form-preview__value">1.05 元/度</span></div>
+          <div class="weui-form-preview__item"><label class="weui-form-preview__label">服务费</label> <span class="weui-form-preview__value">0.6  元/度</span></div>
+          <div class="weui-form-preview__item"><label class="weui-form-preview__label">占桩费</label> <span class="weui-form-preview__value">0.1 元/分钟</span></div>
+          <div class="weui-form-preview__item"><label class="weui-form-preview__label">停车费</label> <span class="weui-form-preview__value">0.0 元/小时</span></div>
+          <div class="weui-form-preview__item"><label class="weui-form-preview__label">电桩编号</label> <span class="weui-form-preview__value">1#</span></div>
+          <div class="weui-form-preview__item"><label class="weui-form-preview__label">枪口</label> <span class="weui-form-preview__value">单枪</span></div>
+          <div class="weui-form-preview__item"><label class="weui-form-preview__label">充电接口</label> <span class="weui-form-preview__value">支流</span></div>
+        </div>
+        <div class="weui-form-preview__ft"><a href="javascript:" class="weui-form-preview__btn weui-form-preview__btn_default">结束充电</a><a href="javascript:" class="weui-form-preview__btn weui-form-preview__btn_primary">暂停充电</a></div>
+      </div>
+      <!-- start 实时监控 -->
+    </div>
+  </div>
+  <script type="text/javascript" src="js/zepto.min.js"></script>
+  <script type="text/javascript" src="js/circle.js"></script>
+  <script type="text/javascript">
+
+  </script>
+</body>
+</html>
