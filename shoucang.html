@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>我的收藏</title>
+  <link rel="stylesheet" href="css/weui.min.css">
+  <link rel="stylesheet" href="css/global.css">
+  <style>
+    .searchbar-result{display: none;margin-top:0;font-size:14px;}
+    .fav-list{}
+    .fav-list .weui-media-box{display: block;background-color:#FFF;}
+    .right-absolute{position: absolute;top:10px;right:10px;}
+    .fav{height:48px;width:48px;display: block;border-radius: 100%;background: rgba(0,0,0,.7) url(images/icon_fav.png) center center / 32px 32px no-repeat;transition: all 0.2s;}
+    .fav.active{background:#FFF url(images/icon_faved.png) center center / 32px 32px no-repeat;}
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="page-header">
+      <a href="index.html" class="header-btn-left header-btn-left__close">个人中心</a>
+    </div>
+    <!-- start 搜索 -->
+    <div class="weui-search-bar" id="searchBar">
+            <form class="weui-search-bar__form">
+                <div class="weui-search-bar__box">
+                    <i class="weui-icon-search"></i>
+                    <input type="search" class="weui-search-bar__input" id="searchInput" placeholder="搜索" required="">
+                    <a href="javascript:" class="weui-icon-clear" id="searchClear"></a>
+                </div>
+                <label class="weui-search-bar__label" id="searchText">
+                    <i class="weui-icon-search"></i>
+                    <span>搜索</span>
+                </label>
+            </form>
+            <a href="javascript:" class="weui-search-bar__cancel-btn" id="searchCancel">取消</a>
+        </div>
+        <div class="weui-cells searchbar-result" id="searchResult">
+            <div class="weui-cell weui-cell_access">
+                <div class="weui-cell__bd weui-cell_primary">
+                    <p>实时搜索文本</p>
+                </div>
+            </div>
+            <div class="weui-cell weui-cell_access">
+                <div class="weui-cell__bd weui-cell_primary">
+                    <p>实时搜索文本</p>
+                </div>
+            </div>
+            <div class="weui-cell weui-cell_access">
+                <div class="weui-cell__bd weui-cell_primary">
+                    <p>实时搜索文本</p>
+                </div>
+            </div>
+            <div class="weui-cell weui-cell_access">
+                <div class="weui-cell__bd weui-cell_primary">
+                    <p>实时搜索文本</p>
+                </div>
+            </div>
+        </div>
+    <!-- end 搜索 -->
+    <div class="page-content">
+      <!-- start 我的收藏列表 -->
+      <div class="fav-list">
+          <a class="weui-media-box weui-media-box_text" href="daohang.html">
+              <h4 class="weui-media-box__title">庞大桩内部测试充电桩</h4>
+              <p class="weui-media-box__desc">广东省珠海市吉大石花西路60号泰坦科技园</p>
+              <ul class="weui-media-box__info">
+                  <li class="weui-media-box__info__meta text-warning">公共</li>
+                  <li class="weui-media-box__info__meta weui-media-box__info__meta_extra text-success">空闲：5</li>
+                  <li class="weui-media-box__info__meta weui-media-box__info__meta_extra text-primary">总桩数：10</li>
+              </ul>
+              <span class="right-absolute"><span class="fav active"></span></span>
+          </a>
+          <a class="weui-media-box weui-media-box_text" href="daohang.html">
+              <h4 class="weui-media-box__title">驿联新能源汽车体验馆充电站</h4>
+              <p class="weui-media-box__desc">珠海市吉大石花西路68号</p>
+              <ul class="weui-media-box__info">
+                  <li class="weui-media-box__info__meta text-warning">公共</li>
+                  <li class="weui-media-box__info__meta weui-media-box__info__meta_extra text-success">空闲：5</li>
+                  <li class="weui-media-box__info__meta weui-media-box__info__meta_extra text-primary">总桩数：10</li>
+              </ul>
+              <span class="right-absolute"><span class="fav active"></span></span>
+          </a>
+          <a class="weui-media-box weui-media-box_text" href="daohang.html">
+              <h4 class="weui-media-box__title">泰坦大院充电桩</h4>
+              <p class="weui-media-box__desc">广东省珠海市吉大石花西路60号泰坦科技园</p>
+              <ul class="weui-media-box__info">
+                  <li class="weui-media-box__info__meta text-warning">公共</li>
+                  <li class="weui-media-box__info__meta weui-media-box__info__meta_extra text-success">空闲：5</li>
+                  <li class="weui-media-box__info__meta weui-media-box__info__meta_extra text-primary">总桩数：10</li>
+              </ul>
+              <span class="right-absolute"><span class="fav active"></span></span>
+          </a>
+          <a class="weui-media-box weui-media-box_text" href="daohang.html">
+              <h4 class="weui-media-box__title">三和超市自营充电站</h4>
+              <p class="weui-media-box__desc">广东省珠海市港湾大道60号南方科技园</p>
+              <ul class="weui-media-box__info">
+                  <li class="weui-media-box__info__meta text-warning">公共</li>
+                  <li class="weui-media-box__info__meta weui-media-box__info__meta_extra text-success">空闲：5</li>
+                  <li class="weui-media-box__info__meta weui-media-box__info__meta_extra text-primary">总桩数：10</li>
+              </ul>
+              <span class="right-absolute"><span class="fav active"></span></span>
+          </a>
+          <a class="weui-media-box weui-media-box_text" href="daohang.html">
+              <h4 class="weui-media-box__title">远光软件充电站</h4>
+              <p class="weui-media-box__desc">广东省珠海市港湾大道2号远光科技园</p>
+              <ul class="weui-media-box__info">
+                  <li class="weui-media-box__info__meta text-warning">公共</li>
+                  <li class="weui-media-box__info__meta weui-media-box__info__meta_extra text-success">空闲：5</li>
+                  <li class="weui-media-box__info__meta weui-media-box__info__meta_extra text-primary">总桩数：10</li>
+              </ul>
+              <span class="right-absolute"><span class="fav active"></span></span>
+          </a>
+          <a class="weui-media-box weui-media-box_text" href="daohang.html">
+              <h4 class="weui-media-box__title">唐家湾镇轻轨站充电站</h4>
+              <p class="weui-media-box__desc">广东省珠海市金峰路44号唐家湾轻轨站</p>
+              <ul class="weui-media-box__info">
+                  <li class="weui-media-box__info__meta text-warning">公共</li>
+                  <li class="weui-media-box__info__meta weui-media-box__info__meta_extra text-success">空闲：5</li>
+                  <li class="weui-media-box__info__meta weui-media-box__info__meta_extra text-primary">总桩数：10</li>
+              </ul>
+              <span class="right-absolute"><span class="fav active"></span></span>
+          </a>
+          <a class="weui-media-box weui-media-box_text" href="daohang.html">
+              <h4 class="weui-media-box__title">金鼎充电站</h4>
+              <p class="weui-media-box__desc">广东省珠海市金峰路180号世纪百货公司斜对面</p>
+              <ul class="weui-media-box__info">
+                  <li class="weui-media-box__info__meta text-warning">公共</li>
+                  <li class="weui-media-box__info__meta weui-media-box__info__meta_extra text-success">空闲：8</li>
+                  <li class="weui-media-box__info__meta weui-media-box__info__meta_extra text-primary">总桩数：20</li>
+              </ul>
+              <span class="right-absolute"><span class="fav active"></span></span>
+          </a>
+        </div>
+      <!-- start 我的收藏列表 -->
+    </div>
+  </div>
+  <script type="text/javascript" src="js/zepto.min.js"></script>
+  <script type="text/javascript" src="js/weui.min.js"></script>
+  <script type="text/javascript">
+    $(function(){
+        var $searchBar = $('#searchBar'),
+            $searchResult = $('#searchResult'),
+            $searchText = $('#searchText'),
+            $searchInput = $('#searchInput'),
+            $searchClear = $('#searchClear'),
+            $searchCancel = $('#searchCancel');
+
+        function hideSearchResult(){
+            $searchResult.hide();
+            $searchInput.val('');
+        }
+        function cancelSearch(){
+            hideSearchResult();
+            $searchBar.removeClass('weui-search-bar_focusing');
+            $searchText.show();
+        }
+
+        $searchText.on('click', function(){
+            $searchBar.addClass('weui-search-bar_focusing');
+            $searchInput.focus();
+        });
+        $searchInput
+            .on('blur', function () {
+                if(!this.value.length) cancelSearch();
+            })
+            .on('input', function(){
+                if(this.value.length) {
+                    $searchResult.show();
+                } else {
+                    $searchResult.hide();
+                }
+            })
+        ;
+        $searchClear.on('click', function(){
+            hideSearchResult();
+            $searchInput.focus();
+        });
+        $searchCancel.on('click', function(){
+            cancelSearch();
+            $searchInput.blur();
+        });
+        //取消收藏
+        $(".fav").on("click",function(e){e.preventDefault();
+            var _this = $(this);
+            _this.removeClass("active");
+            weui.toast('取消收藏', {duration: 3000,});
+            setTimeout(function () {_this.parents(".weui-media-box").hide(200);}, 1000);
+
+        });
+    });
+  </script>
+</body>
+</html>
