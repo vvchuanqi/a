@@ -8,210 +8,83 @@
   <link rel="stylesheet" href="css/weui.min.css">
   <link rel="stylesheet" href="css/global.css">
   <style>
-    .about .weui-cells{margin:0;background: #1AAD19;color:#FFF;}
-    .about .weui-cells .weui-cell:active{background:#4CAF50;}
-    .about .weui-cells .weui-cell__ft{color:#FFF;}
-    .weui-tab-small{}
-    .weui-tab-small .weui-navbar__item{padding:8px 0;}
-    .weui-tab-small .weui-tab__panel{padding-top:40px;}
-    .list-dianzhuang{margin-top:0;display: none;}
-    .list-dianzhuang.show{display: block;}
-    .list-dianzhuang-item .icon{width:32px;margin-right:15px;display:block;border-radius: 100%;}
+      .weui-cells{font-size:14px;}
+      .weui-cells:first-child{margin-top:0;}
   </style>
 </head>
 <body>
   <div class="page">
-    <!-- start 充电站详情入口 -->
-    <div class="about">
-      <div class="weui-cells">
-            <a class="weui-cell weui-cell_access" href="javascript:;">
-                <div class="weui-cell__bd">
-                    <p>唐家湾镇轻轨站充电站</p>
-                </div>
-                <div class="weui-cell__ft">详情
-                </div>
-            </a>
-        </div>
-    </div>
-    <!-- end 充电站详情入口 -->
     <div class="page-content">
-      <!-- start 页签 -->
-      <div class="weui-tab weui-tab-small">
-          <div class="weui-navbar">
-              <div class="weui-navbar__item weui-bar__item_on">
-                  交流
-              </div>
-              <div class="weui-navbar__item">
-                  直流
-              </div>
-          </div>
-          <div class="weui-tab__panel">
-              <div class="weui-cells list-dianzhuang show">
-                <a class="weui-cell weui-cell_access list-dianzhuang-item" href="javascript:;">
-                    <div class="weui-cell__hd"><img src="images/icon_chongdianzhuang.jpg" alt="" class="icon"></div>
-                    <div class="weui-cell__bd">
-                        <p>1# - 单枪</p>
-                    </div>
-                    <div class="weui-cell__ft"><span class="text-success">空闲</span></div>
-                </a>
-                <a class="weui-cell weui-cell_access list-dianzhuang-item" href="javascript:;">
-                    <div class="weui-cell__hd"><img src="images/icon_chongdianzhuang.jpg" alt="" class="icon"></div>
-                    <div class="weui-cell__bd">
-                        <p>2# - 单枪</p>
-                    </div>
-                    <div class="weui-cell__ft"><span class="text-danger">充电中</span></div>
-                </a>
-                <a class="weui-cell weui-cell_access list-dianzhuang-item" href="javascript:;">
-                    <div class="weui-cell__hd"><img src="images/icon_chongdianzhuang.jpg" alt="" class="icon"></div>
-                    <div class="weui-cell__bd">
-                        <p>1# - 单枪</p>
-                    </div>
-                    <div class="weui-cell__ft"><span class="text-success">空闲</span></div>
-                </a>
-                <a class="weui-cell weui-cell_access list-dianzhuang-item" href="javascript:;">
-                    <div class="weui-cell__hd"><img src="images/icon_chongdianzhuang.jpg" alt="" class="icon"></div>
-                    <div class="weui-cell__bd">
-                        <p>2# - 单枪</p>
-                    </div>
-                    <div class="weui-cell__ft"><span class="text-danger">充电中</span></div>
-                </a>
-                <a class="weui-cell weui-cell_access list-dianzhuang-item" href="javascript:;">
-                    <div class="weui-cell__hd"><img src="images/icon_chongdianzhuang.jpg" alt="" class="icon"></div>
-                    <div class="weui-cell__bd">
-                        <p>1# - 单枪</p>
-                    </div>
-                    <div class="weui-cell__ft"><span class="text-success">空闲</span></div>
-                </a>
-                <a class="weui-cell weui-cell_access list-dianzhuang-item" href="javascript:;">
-                    <div class="weui-cell__hd"><img src="images/icon_chongdianzhuang.jpg" alt="" class="icon"></div>
-                    <div class="weui-cell__bd">
-                        <p>2# - 单枪</p>
-                    </div>
-                    <div class="weui-cell__ft"><span class="text-danger">充电中</span></div>
-                </a>
-                <a class="weui-cell weui-cell_access list-dianzhuang-item" href="javascript:;">
-                    <div class="weui-cell__hd"><img src="images/icon_chongdianzhuang.jpg" alt="" class="icon"></div>
-                    <div class="weui-cell__bd">
-                        <p>1# - 单枪</p>
-                    </div>
-                    <div class="weui-cell__ft"><span class="text-success">空闲</span></div>
-                </a>
-                <a class="weui-cell weui-cell_access list-dianzhuang-item" href="javascript:;">
-                    <div class="weui-cell__hd"><img src="images/icon_chongdianzhuang.jpg" alt="" class="icon"></div>
-                    <div class="weui-cell__bd">
-                        <p>2# - 单枪</p>
-                    </div>
-                    <div class="weui-cell__ft"><span class="text-danger">充电中</span></div>
-                </a>
-                <a class="weui-cell weui-cell_access list-dianzhuang-item" href="javascript:;">
-                    <div class="weui-cell__hd"><img src="images/icon_chongdianzhuang.jpg" alt="" class="icon"></div>
-                    <div class="weui-cell__bd">
-                        <p>1# - 单枪</p>
-                    </div>
-                    <div class="weui-cell__ft"><span class="text-success">空闲</span></div>
-                </a>
-                <a class="weui-cell weui-cell_access list-dianzhuang-item" href="javascript:;">
-                    <div class="weui-cell__hd"><img src="images/icon_chongdianzhuang.jpg" alt="" class="icon"></div>
-                    <div class="weui-cell__bd">
-                        <p>2# - 单枪</p>
-                    </div>
-                    <div class="weui-cell__ft"><span class="text-danger">充电中</span></div>
-                </a>
-
-                <a class="weui-cell weui-cell_access list-dianzhuang-item" href="javascript:;">
-                    <div class="weui-cell__hd"><img src="images/icon_chongdianzhuang.jpg" alt="" class="icon"></div>
-                    <div class="weui-cell__bd">
-                        <p>2# - 单枪</p>
-                    </div>
-                    <div class="weui-cell__ft"><span class="text-danger">充电中</span></div>
-                </a>
-
-                <a class="weui-cell weui-cell_access list-dianzhuang-item" href="javascript:;">
-                    <div class="weui-cell__hd"><img src="images/icon_chongdianzhuang.jpg" alt="" class="icon"></div>
-                    <div class="weui-cell__bd">
-                        <p>2# - 单枪</p>
-                    </div>
-                    <div class="weui-cell__ft"><span class="text-danger">充电中</span></div>
-                </a>
-
-                <a class="weui-cell weui-cell_access list-dianzhuang-item" href="javascript:;">
-                    <div class="weui-cell__hd"><img src="images/icon_chongdianzhuang.jpg" alt="" class="icon"></div>
-                    <div class="weui-cell__bd">
-                        <p>2# - 单枪</p>
-                    </div>
-                    <div class="weui-cell__ft"><span class="text-danger">充电中</span></div>
-                </a>
-              </div>
-              <div class="weui-cells list-dianzhuang">
-                    <a class="weui-cell weui-cell_access list-dianzhuang-item" href="javascript:;">
-                        <div class="weui-cell__hd"><img src="images/icon_chongdianzhuang.jpg" alt="" class="icon"></div>
-                        <div class="weui-cell__bd">
-                            <p>1# - 双枪</p>
-                        </div>
-                        <div class="weui-cell__ft"><span class="text-success">空闲</span></div>
-                    </a>
-                    <a class="weui-cell weui-cell_access list-dianzhuang-item" href="javascript:;">
-                        <div class="weui-cell__hd"><img src="images/icon_chongdianzhuang.jpg" alt="" class="icon"></div>
-                        <div class="weui-cell__bd">
-                            <p>1# - 单枪</p>
-                        </div>
-                        <div class="weui-cell__ft"><span class="text-success">空闲</span></div>
-                    </a>
-                    <a class="weui-cell weui-cell_access list-dianzhuang-item" href="javascript:;">
-                        <div class="weui-cell__hd"><img src="images/icon_chongdianzhuang.jpg" alt="" class="icon"></div>
-                        <div class="weui-cell__bd">
-                            <p>1# - 单枪</p>
-                        </div>
-                        <div class="weui-cell__ft"><span class="text-success">空闲</span></div>
-                    </a>
-                    <a class="weui-cell weui-cell_access list-dianzhuang-item" href="javascript:;">
-                        <div class="weui-cell__hd"><img src="images/icon_chongdianzhuang.jpg" alt="" class="icon"></div>
-                        <div class="weui-cell__bd">
-                            <p>2# - 单枪</p>
-                        </div>
-                        <div class="weui-cell__ft"><span class="text-danger">充电中</span></div>
-                    </a>
-                    <a class="weui-cell weui-cell_access list-dianzhuang-item" href="javascript:;">
-                        <div class="weui-cell__hd"><img src="images/icon_chongdianzhuang.jpg" alt="" class="icon"></div>
-                        <div class="weui-cell__bd">
-                            <p>1# - 单枪</p>
-                        </div>
-                        <div class="weui-cell__ft"><span class="text-success">空闲</span></div>
-                    </a>
-                    <a class="weui-cell weui-cell_access list-dianzhuang-item" href="javascript:;">
-                        <div class="weui-cell__hd"><img src="images/icon_chongdianzhuang.jpg" alt="" class="icon"></div>
-                        <div class="weui-cell__bd">
-                            <p>2# - 单枪</p>
-                        </div>
-                        <div class="weui-cell__ft"><span class="text-danger">充电中</span></div>
-                    </a>
-                    <a class="weui-cell weui-cell_access list-dianzhuang-item" href="javascript:;">
-                        <div class="weui-cell__hd"><img src="images/icon_chongdianzhuang.jpg" alt="" class="icon"></div>
-                        <div class="weui-cell__bd">
-                            <p>2# - 单枪</p>
-                        </div>
-                        <div class="weui-cell__ft"><span class="text-danger">充电中</span></div>
-                    </a>
-
-                    <a class="weui-cell weui-cell_access list-dianzhuang-item" href="javascript:;">
-                        <div class="weui-cell__hd"><img src="images/icon_chongdianzhuang.jpg" alt="" class="icon"></div>
-                        <div class="weui-cell__bd">
-                            <p>2# - 单枪</p>
-                        </div>
-                        <div class="weui-cell__ft"><span class="text-danger">充电中</span></div>
-                    </a>
-
-                    <a class="weui-cell weui-cell_access list-dianzhuang-item" href="javascript:;">
-                        <div class="weui-cell__hd"><img src="images/icon_chongdianzhuang.jpg" alt="" class="icon"></div>
-                        <div class="weui-cell__bd">
-                            <p>2# - 单枪</p>
-                        </div>
-                        <div class="weui-cell__ft"><span class="text-danger">充电中</span></div>
-                    </a>
-                </div>
-          </div>
+      <!-- start 充电桩详情 -->
+      <div class="weui-cells">
+        <div class="weui-cell">
+            <div class="weui-cell__bd">
+                <p>充电站名</p>
+            </div>
+            <div class="weui-cell__ft">唐家湾镇轻轨站充电站</div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__bd">
+                <p>电桩型号</p>
+            </div>
+            <div class="weui-cell__ft">ZHY-TTZY-1ACN-GB11-450V30KW</div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__bd">
+                <p>站内编号</p>
+            </div>
+            <div class="weui-cell__ft">1#</div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__bd">
+                <p>枪口</p>
+            </div>
+            <div class="weui-cell__ft">单枪</div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__bd">
+                <p>充电接口</p>
+            </div>
+            <div class="weui-cell__ft">直流</div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__bd">
+                <p>当前状态</p>
+            </div>
+            <div class="weui-cell__ft">空闲中</div>
+        </div>
       </div>
-      <!-- end 页签 -->
+      <div class="weui-cells__title">费用说明</div>
+      <div class="weui-cells">
+        <div class="weui-cell">
+            <div class="weui-cell__bd">
+                <p>电费</p>
+            </div>
+            <div class="weui-cell__ft">1.05 ~ 1.05 元/度</div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__bd">
+                <p>服务费</p>
+            </div>
+            <div class="weui-cell__ft">0.6 ~ 0.6 元/度</div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__bd">
+                <p>占桩费</p>
+            </div>
+            <div class="weui-cell__ft">0.1 ~ 0.1 元/分钟</div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__bd">
+                <p>停车费</p>
+            </div>
+            <div class="weui-cell__ft">0.00 元/小时</div>
+        </div>
+      </div>
+      <div class="weui-btn-area">
+            <a class="weui-btn weui-btn_primary" href="javascript:" id="hongdian">扫码充电</a>
+        </div>
+      <!-- end 充电桩详情 -->
     </div>
   </div>
   <script type="text/javascript" src="js/zepto.min.js"></script>
@@ -219,11 +92,7 @@
   <script type="text/javascript">
     //
     $(function(){
-        $('.weui-navbar__item').on('click', function () {
-            var index = $(this).index;
-            $(this).addClass('weui-bar__item_on').siblings('.weui-bar__item_on').removeClass('weui-bar__item_on');
-            $(".list-dianzhuang").toggleClass("show")
-        });
+
     });
   </script>
 </body>

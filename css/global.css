@@ -30,3 +30,9 @@ html,body,.page{height:100%;margin:0;padding:0;}
 
 
 .price:before{font-size:75%;content:"￥";opacity: .5;}
+
+/* start 全局顶部页签样式修改 */
+.weui-navbar__item{background-color: #FFF;}
+.weui-navbar__item.weui-bar__item_on{background-color: #FFF;}
+.weui-navbar__item.weui-bar__item_on:before{content:"";position:absolute;left:0;bottom:0;right:0;height:4px;background-color:#4CAF50;}
+/* end */
