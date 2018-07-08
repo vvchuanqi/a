@@ -8,7 +8,9 @@
   <link rel="stylesheet" href="css/weui.min.css">
   <link rel="stylesheet" href="css/global.css">
   <style>
-
+      .weui-tab__panel .list{display: none;}
+      .weui-tab__panel .list.active{display: block;}
+      a.weui-media-box{display: block;}
   </style>
 </head>
 <body>
@@ -16,7 +18,7 @@
     <div class="page-content">
       <!-- start 页签 -->
       <div class="weui-tab">
-          <div class="weui-navbar">
+          <div class="weui-navbar" id="navBar">
               <div class="weui-navbar__item weui-bar__item_on">
                   全部
               </div>
@@ -31,35 +33,87 @@
               </div>
           </div>
           <div class="weui-tab__panel">
-            <!-- start 充电记录列表 -->
-            <div class="weui-panel">
-                  <div class="weui-panel__hd">唐家湾镇轻轨站充电站</div>
-                  <div class="weui-panel__bd">
-                      <div class="weui-media-box weui-media-box_text">
-                          <h4 class="weui-media-box__title">1# - 单枪</h4>
-                          <p class="weui-media-box__desc">电桩编号：ZHY-TTZY-1ACN-GB11-450V30KW</p>
-                          <ul class="weui-media-box__info">
-                              <li class="weui-media-box__info__meta">充电时长:30分钟</li>
-                              <li class="weui-media-box__info__meta weui-media-box__info__meta_extra">2018.7.7</li>
-                              <li class="weui-media-box__info__meta weui-media-box__info__meta_extra">费用：<span class="price text-warning">14.00</span></li>
-                          </ul>
+              <div class="list active">
+                <!-- start 充电记录列表 -->
+                  <div class="weui-panel">
+                      <div class="weui-panel__hd">唐家湾镇轻轨站充电站</div>
+                      <div class="weui-panel__bd">
+                          <a href="#" class="weui-media-box weui-media-box_text">
+                              <h4 class="weui-media-box__title">1# - 单枪</h4>
+                              <p class="weui-media-box__desc">电桩编号：ZHY-TTZY-1ACN-GB11-450V30KW</p>
+                              <ul class="weui-media-box__info">
+                                  <li class="weui-media-box__info__meta">充电时长:12分钟</li>
+                                  <li class="weui-media-box__info__meta weui-media-box__info__meta_extra">2018.7.7</li>
+                                  <li class="weui-media-box__info__meta weui-media-box__info__meta_extra">费用：<span class="price text-warning">14.00</span></li>
+                              </ul>
+                          </a>
                       </div>
                   </div>
-              </div>
-              <div class="weui-panel">
-                    <div class="weui-panel__hd">唐家湾镇轻轨站充电站</div>
-                    <div class="weui-panel__bd">
-                        <div class="weui-media-box weui-media-box_text">
-                            <h4 class="weui-media-box__title">1# - 单枪</h4>
-                            <p class="weui-media-box__desc">电桩编号：ZHY-TTZY-1ACN-GB11-450V30KW</p>
-                            <ul class="weui-media-box__info">
-                                <li class="weui-media-box__info__meta">充电时长:30分钟</li>
-                                <li class="weui-media-box__info__meta weui-media-box__info__meta_extra">2018.7.7</li>
-                                <li class="weui-media-box__info__meta weui-media-box__info__meta_extra">费用：<span class="price text-warning">14.00</span></li>
-                            </ul>
+                  <div class="weui-panel">
+                        <div class="weui-panel__hd">唐家湾镇轻轨站充电站</div>
+                        <div class="weui-panel__bd">
+                            <a href="#" class="weui-media-box weui-media-box_text">
+                                <h4 class="weui-media-box__title">1# - 单枪</h4>
+                                <p class="weui-media-box__desc">电桩编号：ZHY-TTZY-1ACN-GB11-450V30KW</p>
+                                <ul class="weui-media-box__info">
+                                    <li class="weui-media-box__info__meta">充电时长:30分钟</li>
+                                    <li class="weui-media-box__info__meta weui-media-box__info__meta_extra">2018.7.7</li>
+                                    <li class="weui-media-box__info__meta weui-media-box__info__meta_extra">费用：<span class="price text-warning">20.00</span></li>
+                                </ul>
+                            </a>
+                        </div>
+                  </div>
+                  <div class="weui-panel">
+                      <div class="weui-panel__hd">唐家湾镇轻轨站充电站</div>
+                      <div class="weui-panel__bd">
+                          <a href="#" class="weui-media-box weui-media-box_text">
+                              <h4 class="weui-media-box__title">1# - 单枪</h4>
+                              <p class="weui-media-box__desc">电桩编号：ZHY-TTZY-1ACN-GB11-450V30KW</p>
+                              <ul class="weui-media-box__info">
+                                  <li class="weui-media-box__info__meta">充电时长:20分钟</li>
+                                  <li class="weui-media-box__info__meta weui-media-box__info__meta_extra">2018.7.7</li>
+                                  <li class="weui-media-box__info__meta weui-media-box__info__meta_extra">费用：<span class="price text-warning">15.00</span></li>
+                              </ul>
+                          </a>
+                      </div>
+                  </div>
+                  <div class="weui-panel">
+                        <div class="weui-panel__hd">唐家湾镇轻轨站充电站</div>
+                        <div class="weui-panel__bd">
+                          <a href="#" class="weui-media-box weui-media-box_text">
+                              <h4 class="weui-media-box__title">1# - 单枪</h4>
+                              <p class="weui-media-box__desc">电桩编号：ZHY-TTZY-1ACN-GB11-450V30KW</p>
+                              <ul class="weui-media-box__info">
+                                  <li class="weui-media-box__info__meta">充电时长:12分钟</li>
+                                  <li class="weui-media-box__info__meta weui-media-box__info__meta_extra">2018.7.7</li>
+                                  <li class="weui-media-box__info__meta weui-media-box__info__meta_extra">费用：<span class="price text-warning">22.00</span></li>
+                              </ul>
+                          </a>
                         </div>
                     </div>
-                </div>
+                  <!-- start 充电记录列表 -->
+              </div>
+              <div class="list">
+                <!-- start 充电中 -->
+                <div class="weui-panel">
+                      <div class="weui-panel__hd">唐家湾镇轻轨站充电站</div>
+                      <div class="weui-panel__bd">
+                          <a href="jiankong.html" class="weui-media-box weui-media-box_text">
+                              <h4 class="weui-media-box__title">1# - 单枪</h4>
+                              <p class="weui-media-box__desc">电桩编号：ZHY-TTZY-1ACN-GB11-450V30KW</p>
+                              <ul class="weui-media-box__info">
+                                  <li class="weui-media-box__info__meta text-primary">充电时长:5分钟</li>
+                                  <li class="weui-media-box__info__meta weui-media-box__info__meta_extra text-success">电量：75%</li>
+                                  <li class="weui-media-box__info__meta weui-media-box__info__meta_extra text-warning">实时费用：<span class="price">14.00</span></li>
+                              </ul>
+                          </a>
+                      </div>
+                      <div class="weui-form-preview__ft"><a href="javascript:" class="weui-form-preview__btn weui-form-preview__btn_default">结束充电</a><a href="javascript:" class="weui-form-preview__btn weui-form-preview__btn_primary">暂停充电</a></div>
+                  </div>
+                <!-- end 充电中 -->
+              </div>
+              <div class="list">
+                <!-- start 待评价 -->
                 <div class="weui-panel">
                       <div class="weui-panel__hd">唐家湾镇轻轨站充电站</div>
                       <div class="weui-panel__bd">
@@ -67,28 +121,35 @@
                               <h4 class="weui-media-box__title">1# - 单枪</h4>
                               <p class="weui-media-box__desc">电桩编号：ZHY-TTZY-1ACN-GB11-450V30KW</p>
                               <ul class="weui-media-box__info">
-                                  <li class="weui-media-box__info__meta">充电时长:30分钟</li>
-                                  <li class="weui-media-box__info__meta weui-media-box__info__meta_extra">2018.7.7</li>
-                                  <li class="weui-media-box__info__meta weui-media-box__info__meta_extra">费用：<span class="price text-warning">14.00</span></li>
+                                  <li class="weui-media-box__info__meta">充电时长:20分钟</li>
+                                  <li class="weui-media-box__info__meta weui-media-box__info__meta_extra">2018.6.2</li>
+                                  <li class="weui-media-box__info__meta weui-media-box__info__meta_extra">费用：<span class="price text-warning">22.00</span></li>
                               </ul>
                           </div>
                       </div>
+                      <div class="weui-form-preview__ft"><a href="to-pingjia.html" class="weui-form-preview__btn weui-form-preview__btn_primary">评价</a></div>
                   </div>
-                  <div class="weui-panel">
-                        <div class="weui-panel__hd">唐家湾镇轻轨站充电站</div>
-                        <div class="weui-panel__bd">
-                            <div class="weui-media-box weui-media-box_text">
-                                <h4 class="weui-media-box__title">1# - 单枪</h4>
-                                <p class="weui-media-box__desc">电桩编号：ZHY-TTZY-1ACN-GB11-450V30KW</p>
-                                <ul class="weui-media-box__info">
-                                    <li class="weui-media-box__info__meta">充电时长:30分钟</li>
-                                    <li class="weui-media-box__info__meta weui-media-box__info__meta_extra">2018.7.7</li>
-                                    <li class="weui-media-box__info__meta weui-media-box__info__meta_extra">费用：<span class="price text-warning">14.00</span></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-              <!-- start 充电记录列表 -->
+                <!-- end 待评价 -->
+              </div>
+              <div class="list">
+                <!-- start 已完成 -->
+                <div class="weui-panel">
+                      <div class="weui-panel__hd">唐家湾镇轻轨站充电站</div>
+                      <div class="weui-panel__bd">
+                          <div class="weui-media-box weui-media-box_text">
+                              <h4 class="weui-media-box__title">1# - 单枪</h4>
+                              <p class="weui-media-box__desc">电桩编号：ZHY-TTZY-1ACN-GB11-450V30KW</p>
+                              <ul class="weui-media-box__info">
+                                  <li class="weui-media-box__info__meta">充电时长:10分钟</li>
+                                  <li class="weui-media-box__info__meta weui-media-box__info__meta_extra">2018.6.2</li>
+                                  <li class="weui-media-box__info__meta weui-media-box__info__meta_extra text-warning">费用：<span class="price">5.00</span></li>
+                              </ul>
+                          </div>
+                      </div>
+                      <div class="weui-form-preview__ft"><a href="javascript:" class="weui-form-preview__btn weui-form-preview__btn_primary text-danger js-delete-jilu">删除</a></div>
+                  </div>
+                <!-- end 已完成 -->
+              </div>
           </div>
       </div>
       <!-- end 页签 -->
@@ -99,8 +160,28 @@
   <script type="text/javascript">
     //
     $(function(){
-        $('.weui-navbar__item').on('click', function () {
-            $(this).addClass('weui-bar__item_on').siblings('.weui-bar__item_on').removeClass('weui-bar__item_on');
+      //切换页签
+        $("#navBar .weui-navbar__item").each(function(){
+            var index = $(this).index();
+            var length = $("#navBar .weui-navbar__item").length;
+            var $list = $(this).parents(".weui-tab").find(".weui-tab__panel .list");
+            $(this).on('click', function () {
+                $(this).addClass('weui-bar__item_on').siblings('.weui-bar__item_on').removeClass('weui-bar__item_on');
+                $list.removeClass("active");
+                $list.eq(index).addClass("active");
+                console.log(index);
+                console.log(length);
+            });
+        });
+        //删除充电记录
+        $(".js-delete-jilu").on("click",function(){
+          weui.confirm('删除后无法恢复，请确认', function () {
+                 console.log('yes');
+             }, function () {
+                 console.log('no');
+             }, {
+                 title: '确认删除记录'
+             });
         });
     });
   </script>

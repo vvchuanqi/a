@@ -8,70 +8,154 @@
   <link rel="stylesheet" href="css/weui.min.css">
   <link rel="stylesheet" href="css/global.css">
   <style>
-    .icon-star{display: inline-block;height:32px;width:32px;vertical-align: middle;background: url(images/icon_star_full.png) center center / 100% 100% no-repeat;}
-    .icon-star-empty{display: inline-block;height:32px;width:32px;vertical-align: middle;background: url(images/icon_star_empty.png) center center / 100% 100% no-repeat;}
-    .weui-media-box__title{text-align: center;position: relative;padding-bottom:15px;}
-    .weui-media-box__title:after{content:"";position: absolute;bottom:0;left:4em;right:4em;border-bottom:1px solid #e5e5e5;transform: scaleY(0.5);}
+    .icon-star{display: inline-block;height:24px;width:24px;vertical-align: middle;background: url(images/icon_star_full.png) center center / 100% 100% no-repeat;}
+    .icon-star-empty{display: inline-block;height:24px;width:24px;vertical-align: middle;background: url(images/icon_star_empty.png) center center / 100% 100% no-repeat;}
     .label-comment{display: inline-block;border-radius: 40px;background-color: #f8f8f9;padding:5px 16px;color:#999;margin:0 10px 10px 0;}
+
+    .weui-tab__panel .list{display: none;}
+    .weui-tab__panel .list.active{display: block;}
+    a.weui-media-box{display: block;}
   </style>
 </head>
 <body>
   <div class="page">
     <div class="page-content">
-      <!-- start 评价列表 -->
-      <div class="weui-panel">
-            <div class="weui-panel__hd">唐家湾镇轻轨站充电站</div>
-            <div class="weui-panel__bd">
-                <div class="weui-media-box weui-media-box_text">
-                    <h4 class="weui-media-box__title"><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span></h4>
-                    <p class="weui-media-box__desc"><label class="label-comment">充电迅速</label><label class="label-comment">环境好</label><label class="label-comment">周边服务佳</label><label class="label-comment">充电平稳</label></p>
-                    <p class="weui-media-box__desc">可以作为长途旅行充电必备充电点，强烈推荐~~</p>
-                    <ul class="weui-media-box__info">
-                        <li class="weui-media-box__info__meta">充电时长:30分钟</li>
-                        <li class="weui-media-box__info__meta weui-media-box__info__meta_extra">2018.7.7</li>
-                        <li class="weui-media-box__info__meta weui-media-box__info__meta_extra">1# 单枪</li>
-                    </ul>
-                </div>
+      <div class="weui-tab">
+        <div class="weui-navbar" id="navBar">
+            <div class="weui-navbar__item weui-bar__item_on">
+                全部
+            </div>
+            <div class="weui-navbar__item">
+                待评价
+            </div>
+            <div class="weui-navbar__item">
+                已评价
             </div>
         </div>
-
-        <div class="weui-panel">
-              <div class="weui-panel__hd">驿联新能源汽车体验馆充电站</div>
-              <div class="weui-panel__bd">
-                  <div class="weui-media-box weui-media-box_text">
-                      <h4 class="weui-media-box__title"><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star-empty"></span></h4>
-                      <p class="weui-media-box__desc"><label class="label-comment">充电迅速</label><label class="label-comment">环境好</label><label class="label-comment">充电平稳</label></p>
-                      <p class="weui-media-box__desc">店家的态度有问题，想买盒烟抽都不允许，又不是加油站，有必要这么凶嘛~~下次再也不去了</p>
-                      <ul class="weui-media-box__info">
-                          <li class="weui-media-box__info__meta">充电时长:10分钟</li>
-                          <li class="weui-media-box__info__meta weui-media-box__info__meta_extra">2018.7.7</li>
-                          <li class="weui-media-box__info__meta weui-media-box__info__meta_extra">5# 单枪</li>
-                      </ul>
+        <div class="weui-tab__panel">
+          <div class="list active">
+            <!-- start 评价列表 -->
+              <div class="weui-panel">
+                  <div class="weui-panel__hd">唐家湾镇轻轨站充电站 1# - 单枪</div>
+                  <div class="weui-panel__bd">
+                      <div class="weui-media-box weui-media-box_text">
+                          <h4 class="weui-media-box__title"><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span></h4>
+                          <p class="weui-media-box__desc"><label class="label-comment">充电迅速</label><label class="label-comment">环境好</label><label class="label-comment">周边服务佳</label><label class="label-comment">充电平稳</label></p>
+                          <p class="weui-media-box__desc">可以作为长途旅行充电必备充电点，强烈推荐~~</p>
+                          <ul class="weui-media-box__info">
+                              <li class="weui-media-box__info__meta">充电时长:30分钟</li>
+                              <li class="weui-media-box__info__meta weui-media-box__info__meta_extra">2018.7.7</li>
+                              <li class="weui-media-box__info__meta weui-media-box__info__meta_extra">1# 单枪</li>
+                          </ul>
+                      </div>
                   </div>
               </div>
-          </div>
 
-          <div class="weui-panel">
-                <div class="weui-panel__hd">泰坦大院充电桩</div>
-                <div class="weui-panel__bd">
-                    <div class="weui-media-box weui-media-box_text">
-                        <h4 class="weui-media-box__title"><span class="icon-star"></span><span class="icon-star-empty"></span><span class="icon-star-empty"></span><span class="icon-star-empty"></span><span class="icon-star-empty"></span></h4>
-                        <p class="weui-media-box__desc"><label class="label-comment">无法充电</label><label class="label-comment">环境好</label><label class="label-comment">体验糟糕</label></p>
-                        <p class="weui-media-box__desc">我靠~要不要这么坑爹啊~都没建设好都放到地图上来了，害的老子跑那么远没法回家了，还得叫个拖车~哭死！！！</p>
-                        <ul class="weui-media-box__info">
-                            <li class="weui-media-box__info__meta">充电时长:0分钟</li>
-                            <li class="weui-media-box__info__meta weui-media-box__info__meta_extra">2018.7.7</li>
-                            <li class="weui-media-box__info__meta weui-media-box__info__meta_extra">-</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-      <!-- start 评价列表 -->
+              <div class="weui-panel">
+                  <div class="weui-panel__hd">驿联新能源汽车体验馆充电站  1# - 单枪</div>
+                  <div class="weui-panel__bd">
+                      <div class="weui-media-box weui-media-box_text">
+                          <h4 class="weui-media-box__title"><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star-empty"></span></h4>
+                          <p class="weui-media-box__desc"><label class="label-comment">充电迅速</label><label class="label-comment">环境好</label><label class="label-comment">充电平稳</label></p>
+                          <p class="weui-media-box__desc">店家的态度有问题，想买盒烟抽都不允许，又不是加油站，有必要这么凶嘛~~下次再也不去了</p>
+                          <ul class="weui-media-box__info">
+                              <li class="weui-media-box__info__meta">充电时长:10分钟</li>
+                              <li class="weui-media-box__info__meta weui-media-box__info__meta_extra">2018.7.7</li>
+                              <li class="weui-media-box__info__meta weui-media-box__info__meta_extra">5# 单枪</li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="weui-panel">
+                  <div class="weui-panel__hd">泰坦大院充电桩  1# - 单枪</div>
+                  <div class="weui-panel__bd">
+                      <div class="weui-media-box weui-media-box_text">
+                          <h4 class="weui-media-box__title"><span class="icon-star"></span><span class="icon-star-empty"></span><span class="icon-star-empty"></span><span class="icon-star-empty"></span><span class="icon-star-empty"></span></h4>
+                          <p class="weui-media-box__desc"><label class="label-comment">无法充电</label><label class="label-comment">环境好</label><label class="label-comment">体验糟糕</label></p>
+                          <p class="weui-media-box__desc">我靠~要不要这么坑爹啊~都没建设好都放到地图上来了，害的老子跑那么远没法回家了，还得叫个拖车~哭死！！！</p>
+                          <ul class="weui-media-box__info">
+                              <li class="weui-media-box__info__meta">充电时长:0分钟</li>
+                              <li class="weui-media-box__info__meta weui-media-box__info__meta_extra">2018.7.7</li>
+                              <li class="weui-media-box__info__meta weui-media-box__info__meta_extra">-</li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+            <!-- start 评价列表 -->
+          </div>
+          <div class="list">
+            <!-- start 待评价 -->
+            <div class="weui-panel">
+                  <div class="weui-panel__hd">唐家湾镇轻轨站充电站</div>
+                  <div class="weui-panel__bd">
+                      <div class="weui-media-box weui-media-box_text">
+                          <h4 class="weui-media-box__title">1# - 单枪</h4>
+                          <p class="weui-media-box__desc">电桩编号：ZHY-TTZY-1ACN-GB11-450V30KW</p>
+                          <ul class="weui-media-box__info">
+                              <li class="weui-media-box__info__meta">充电时长:20分钟</li>
+                              <li class="weui-media-box__info__meta weui-media-box__info__meta_extra">2018.6.2</li>
+                              <li class="weui-media-box__info__meta weui-media-box__info__meta_extra">费用：<span class="price text-warning">22.00</span></li>
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="weui-form-preview__ft"><a href="to-pingjia.html" class="weui-form-preview__btn weui-form-preview__btn_primary">评价</a></div>
+              </div>
+            <!-- end 待评价 -->
+          </div>
+          <div class="list">
+            <!-- start 已完成 -->
+            <div class="weui-panel">
+                  <div class="weui-panel__hd">唐家湾镇轻轨站充电站 1# - 单枪</div>
+                  <div class="weui-panel__bd">
+                      <div class="weui-media-box weui-media-box_text">
+                          <h4 class="weui-media-box__title"><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span></h4>
+                          <p class="weui-media-box__desc"><label class="label-comment">充电迅速</label><label class="label-comment">环境好</label><label class="label-comment">周边服务佳</label><label class="label-comment">充电平稳</label></p>
+                          <p class="weui-media-box__desc">可以作为长途旅行充电必备充电点，强烈推荐~~</p>
+                          <ul class="weui-media-box__info">
+                              <li class="weui-media-box__info__meta">充电时长:30分钟</li>
+                              <li class="weui-media-box__info__meta weui-media-box__info__meta_extra">2018.7.7</li>
+                              <li class="weui-media-box__info__meta weui-media-box__info__meta_extra">1# 单枪</li>
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="weui-form-preview__ft"><a href="javascript:" class="weui-form-preview__btn weui-form-preview__btn_primary text-danger js-delete-jilu">删除</a></div>
+              </div>
+            <!-- end 已完成 -->
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <script type="text/javascript" src="js/zepto.min.js"></script>
+  <script type="text/javascript" src="js/weui.min.js"></script>
   <script type="text/javascript">
-
+    //
+    $(function(){
+      //切换页签
+        $("#navBar .weui-navbar__item").each(function(){
+            var index = $(this).index();
+            var length = $("#navBar .weui-navbar__item").length;
+            var $list = $(this).parents(".weui-tab").find(".weui-tab__panel .list");
+            $(this).on('click', function () {
+                $(this).addClass('weui-bar__item_on').siblings('.weui-bar__item_on').removeClass('weui-bar__item_on');
+                $list.removeClass("active");
+                $list.eq(index).addClass("active");
+                console.log(index);
+                console.log(length);
+            });
+        });
+        //删除充电记录
+        $(".js-delete-jilu").on("click",function(){
+          weui.confirm('删除后无法恢复，请确认', function () {
+                 console.log('yes');
+             }, function () {
+                 console.log('no');
+             }, {
+                 title: '确认删除评价'
+             });
+        });
+    });
   </script>
 </body>
 </html>

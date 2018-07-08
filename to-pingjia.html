@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>发表充电服务评价</title>
+  <link rel="stylesheet" href="css/weui.min.css">
+  <link rel="stylesheet" href="css/global.css">
+  <style>
+    .icon-star{display: inline-block;height:32px;width:32px;vertical-align: middle;background: url(images/icon_star_full.png) center center / 100% 100% no-repeat;}
+    .icon-star-empty{display: inline-block;height:32px;width:32px;vertical-align: middle;background: url(images/icon_star_empty.png) center center / 100% 100% no-repeat;}
+    .label-comment{display: inline-block;border-radius: 40px;border:1px solid #e5e5e5;padding:5px 16px;color:#999;margin:0 10px 10px 0;}
+    .label-comment:active{background-color:#e5e5e5;}
+    .label-comment.active{background-color:#FFFFFF;border-color:#ff9900;color:#ff9900;}
+
+    .pay-result{background-color:#FFF;padding:50px 15px 15px;text-align: center;position:relative;}
+    .pay-result:after{content:"";position: absolute;left:0;bottom:0;right:0;border-bottom:1px solid #e5e5e5;transform:scaleY(0.5);}
+    .pay-result i{margin-bottom:20px;}
+
+    .rate{background-color:#FFF;position:relative;;padding:15px;text-align: center;}
+
+    .label-comment-list{background-color:#FFF;padding:15px;}
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="page-content">
+        <!-- start 支付记录结果 -->
+        <div class="pay-result">
+            <i class="weui-icon-success weui-icon_msg"></i>
+            <p>微信已支付10.34元</p>
+        </div>
+        <!-- end 支付记录结果 -->
+        <!-- start 评价表单 -->
+        <div class="rate"><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span></div>
+        <div class="label-comment-list" id="labels">
+          <a href="javascript:;" class="label-comment active">充电迅速</a>
+          <a href="javascript:;" class="label-comment">环境好</a>
+          <a href="javascript:;" class="label-comment">充电稳定</a>
+          <a href="javascript:;" class="label-comment">服务好</a>
+        </div>
+        <div class="weui-cells__title">有没有其他想说的话</div>
+        <div class="weui-cells weui-cells_form">
+            <div class="weui-cell">
+                <div class="weui-cell__bd">
+                    <textarea class="weui-textarea" placeholder="请输入评价" rows="3"></textarea>
+                    <div class="weui-textarea-counter"><span>0</span>/200</div>
+                </div>
+            </div>
+        </div>
+        <div class="weui-btn-area">
+            <a class="weui-btn weui-btn_primary" href="javascript:" id="postComment">发表评价</a>
+        </div>
+        <!-- end 评价表单 -->
+    </div>
+  </div>
+  <script type="text/javascript" src="js/zepto.min.js"></script>
+  <script type="text/javascript" src="js/weui.min.js"></script>
+  <script type="text/javascript">
+    //
+    $(function(){
+        //点击评价label后选择
+        $("#labels .label-comment").on("click",function(){
+            if($(this).hasClass("active")){
+                $(this).removeClass("active");
+            }else{
+              $(this).addClass("active");
+            }
+        });
+    });
+  </script>
+</body>
+</html>
